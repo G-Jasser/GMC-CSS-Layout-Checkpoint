@@ -289,7 +289,13 @@ body>div {
   opacity: 1;
 }
 
-.stats>.bg {
+.stats {
+  position: relative;
+  display: flex;
+  height: 32.5em;
+  
+}
+.stats .bg {
   position: absolute;
   background-color: #e5faf8;
   display: block;
@@ -301,18 +307,46 @@ body>div {
 }
 
 .stats .stext {
-  grid-area: p1;
+  margin-top: 32px;
+  width: 65%;
+  padding: 10px;
 }
 
 .stats .statsbox {
-  grid-area: p2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1.2em;
 }
 
-.stats {
-  position: relative;
-  grid-template-areas: 'p1 p1 p2 p2' '. . p2 p2';
+.statsbox .sbox{
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-end;
+  align-items: center;
+  text-align: center;
+
+  background-color: white;
+  margin: 0;
+  height: 220px;
+  width: 210px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(41, 41, 41, 0.116);
 }
 
+.sbox h3{
+  margin: .5em 0;
+}
+
+.sbox p{
+  margin: 0;
+  font-size: 13px;
+}
+
+.sbox img{
+  height: 40px;
+  object-fit: contain;
+}
 
 .offices-header {
   max-width: 460px;
